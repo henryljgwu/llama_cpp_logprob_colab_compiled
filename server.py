@@ -6,7 +6,7 @@ from flask_cloudflared import _run_cloudflared
 
 # 定义运行C++程序的函数
 def run_llama_program():
-    subprocess.run(["./llama-simple"])
+    subprocess.run(["./llama-simple -m model.gguf"])
 
 # 启动C++程序线程
 llama_thread = threading.Thread(target=run_llama_program)
